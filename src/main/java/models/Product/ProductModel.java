@@ -2,17 +2,18 @@ package models.Product;
 
 import models.Insertable;
 import java.util.Date;
-import java.math.BigDecimal;
 
 public class ProductModel implements Insertable {
     int idProduto;
     String nome;
     String descricao;
     int volume;
-    BigDecimal preco;
-    double peso;
+    float preco;
+    float peso;
     boolean entregue;
     Date dataEntrega;
+    int remetenteId;
+    int destinatarioId;
     
     @Override
     public String toString() 
@@ -34,7 +35,7 @@ public class ProductModel implements Insertable {
     	return nome;
     }
 
-    public ProductModel(String nome, String descricao, int volume, BigDecimal preco, double peso, boolean entregue, Date dataEntrega) 
+    public ProductModel(String nome, String descricao, int volume, float preco, float peso, boolean entregue, Date dataEntrega) 
     {
 	    this.nome = nome;
 	    this.descricao = descricao;
@@ -48,10 +49,15 @@ public class ProductModel implements Insertable {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public void setPeso(double peso) {
+    
+    public void setId(int id)
+    {
+    	this.idProduto = id;
+    }
+    public void setPeso(float peso) {
         this.peso = peso;
     }
-    public void setPreco(BigDecimal preco) {
+    public void setPreco(float preco) {
         this.preco = preco;
     }
     public void setVolume(int volume) {
@@ -66,6 +72,12 @@ public class ProductModel implements Insertable {
     public void setDataEntrega(Date dataEntrega) {
         this.dataEntrega = dataEntrega;
     }
+    public void setDestinatarioId(int destinatarioId) {
+		this.destinatarioId = destinatarioId;
+	}
+    public void setRemetenteId(int remetenteId) {
+		this.remetenteId = remetenteId;
+	}
 
     public int getIdProduto() {
         return idProduto;
@@ -73,10 +85,10 @@ public class ProductModel implements Insertable {
     public String getNome() {
         return nome;
     }
-    public double getPeso() {
+    public float getPeso() {
         return peso;
     }
-    public BigDecimal getPreco() {
+    public float getPreco() {
         return preco;
     }
     public int getVolume() {
@@ -91,4 +103,10 @@ public class ProductModel implements Insertable {
     public Date getDataEntrega() {
         return dataEntrega;
     }
+    public int getRemetenteId() {
+		return remetenteId;
+	}
+	public int getDestinatarioId() {
+		return destinatarioId;
+	}
 }

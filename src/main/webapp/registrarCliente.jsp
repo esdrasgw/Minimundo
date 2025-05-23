@@ -26,5 +26,7 @@
 		<p>ID do Produto <input type=text name="produto"/></p>
 		<p><input type="submit" value="Enviar"/></p>
 	</form>
+	
+	<a href = "index.html">Voltar ao início</a>
 </body>
 </html>

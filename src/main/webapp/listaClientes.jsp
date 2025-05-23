@@ -39,5 +39,8 @@
 			</tr>
 		</c:forEach>
 	</table>
+	
+	<a href = "index.html">Voltar ao início</a>
+	
 </body>
 </html>

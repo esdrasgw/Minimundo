@@ -3,6 +3,7 @@ package models.Client;
 import models.Insertable;
 
 public class ClientModel implements Insertable {
+	int id;
 	String nome;
     String cpfCnpj;
     String telefone;
@@ -34,6 +35,9 @@ public class ClientModel implements Insertable {
 
     //#region Setters
     
+    public void setId(int id) {
+        this.id = id;
+    }
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -58,7 +62,10 @@ public class ClientModel implements Insertable {
     //#endregion
 
     //#region Getters
-
+    
+    public int getId() {
+        return id;
+    }
     public String getNome() {
         return nome;
     }
